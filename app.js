@@ -1,9 +1,10 @@
 //onload of the web page
 function load() {
     
-    let button = document.getElementById("but");
-    button.setAttribute("onClick", "clickSearch");
+    document.getElementById("but").addEventListener("click", clickSearch);
 }
+
+window.onload=load;
 
 //Search button event
 function clickSearch() {
@@ -13,8 +14,8 @@ function clickSearch() {
     
     fetch('http://localhost:8080/superheroes.php')
     .then((mes) => mes.text())
-    .then(function(list){
-        alert(list);
+    .then(function(data){
+        alert(data);
     })
     
     .catch(function(er) {
@@ -23,4 +24,3 @@ function clickSearch() {
     
 }
 
-window.onload=load;
