@@ -67,8 +67,25 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<!--get the entered text-->
+<?php $qry = $_GET["qry"]; ?>
+
+<!--if query is empty-->
+<?php
+    if($qry === "") {
+        
+        ?>
+        
+        <ul>
+            <?php foreach($superheroes as $hero): ?>
+            <li> <?= $hero['alias']; ?> </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <?php
+    } 
+    ?>
+
+<!--if hero name is valid-->
+
+

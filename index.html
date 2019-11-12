@@ -8,21 +8,51 @@
         <title>Superhero Search</title>
         
         <style>
-            .html{
+            .body{
                 margin: 0px;
+                
             }
         
             .head{
                 text-align: center;
-                background-color: rgb(68, 219, 214);
+                background-color: rgb(71, 113, 168);
                 padding: 10px;
                 margin: 0;
+                font-family: arial;
+                color: white;
+                
             }
             
             #but{
                 border-radius: 5px;
-                background-color: lightblue;
-                padding: 7px, 8px, 7px, 8px;
+                border: none;
+                background-color: rgb(235, 75, 75);
+                padding: 10px;
+                /*display: inline;*/
+                margin: 0px;
+                font-weight: bold;
+            }
+            
+            .search{
+                display: inline;
+                border-radius: 3px;
+                border: solid;
+                border-width: thin;
+                padding: 9px;
+                width: 500px;
+                margin: 0px;
+            }
+            
+            .bod{
+                padding-left: 15%; 
+                font-family: arial;
+                padding-right: 15%;
+            }
+            
+            hr{
+                border: none;
+                background-color: black;
+                padding: 0.5px;
             }
             
         </style>
@@ -34,11 +64,26 @@
         <div class="head">
             <h1>Avenger Character Search</h1>
         </div>
-        <br><br><br>
-        <!--input field for superhero name-->
-        <!--<input type="text" placeholder="joe grine" id="supName">-->
-        <button id="but" type="button">Search</button>
-    
+        <br>
+        
+        <div class="bod">
+            <h3>Search by Full Name or Alias</h3>
+        
+            <!--input field for superhero name-->
+            <input id="search" class="search" type="text" placeholder="e.g. Captain America ro Steve Rogers" id="supName">
+
+            
+            <button id="but" type="button">Search</button>
+            <br>
+            <br>
+            <h1>Results</h1>
+            <hr>
+            
+            <div id="result"></div>
+            
+            <br>
+        </div>
+
     </body>
     
 </html>
