@@ -92,11 +92,11 @@ $superheroes = [
 
     foreach($superheroes as $hero) {
 
-        if(strcasecmp($hero['alias'], $qry) == 0 || strcasecmp($hero['name'], $qry) == 0){ ?>
+        if(strcasecmp($hero['alias'], $qry) === 0 || strcasecmp($hero['name'], $qry) === 0){ ?>
 
-            <h3><?php $hero['alias']; ?> </h3>
-            <h4><?php $hero['name']; ?> </h4>
-            <p><?php $hero['biography']; ?> <p>
+            <h3><?php echo $hero['alias']; ?> </h3>
+            <h4><?php echo $hero['name']; ?> </h4>
+            <p><?php echo $hero['biography']; ?> <p>
 
             <?php $res="Found";
         }
