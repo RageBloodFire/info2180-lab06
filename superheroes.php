@@ -87,5 +87,29 @@ $superheroes = [
     ?>
 
 <!--if hero name is valid-->
+<?php
+    $res="";
 
+    foreach($superheroes as $hero) {
+
+        if(strcasecmp($hero['alias'], $qry) == 0 || strcasecmp($hero['name'], $qry) == 0){ ?>
+
+            <h3><?php $hero['alias']; ?> </h3>
+            <h4><?php $hero['name']; ?> </h4>
+            <p><?php $hero['biography']; ?> <p>
+
+            <?php $res="Found";
+        }
+
+    }
+
+
+/*if the hero is not in the list/array*/
+    if($res === "" && $qry !== "") {
+        ?>
+        <font color = "red">
+        <b><?php echo $res = "Superhero Not Found!";
+    }
+?>
+        </b></font>
 
